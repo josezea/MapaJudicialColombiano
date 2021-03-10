@@ -1,2 +1,0 @@
-# MapaJudicialColombiano
-Lectura_MapaJudicial
