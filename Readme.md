@@ -4,13 +4,12 @@ Mapa Judicial Colombiano
 El mapa judicial colombiana está disponible en
 <https://www.ramajudicial.gov.co/web/informacion/mapa-judicial-de-colombia>
 
--   Sin embargo esta información no está dispuesta en una hoja de
+-   Sin embargo, esta información no está dispuesta en una hoja de
     cálculo estructurada y además no se dispone el código de división
-    política adminsitrativa (DIVIPOLA) de los municipios y departamentos
-    para poder integrar con otros sistemas de información, la apariencia
-    de este pdf es la siguiente:
-
-![](mapajudicial.png)
+    política adminsitrativa (DIVIPOLA,
+    <https://geoportal.dane.gov.co/geovisores/territorio/consulta-divipola-division-politico-administrativa-de-colombia/>)
+    de los municipios y departamentos para poder integrar con otros
+    sistemas de información
 
 Se leerá cada uno de las hojas del pdf y se estructura la información,
 para localizar el área se usa una aplicación en shiny que permiten
@@ -23,9 +22,9 @@ locate_areas("MAPA JUDICIAL Detallado.pdf", pages = 1)
 -   Se llega a cabo una lectura programática del archivo en pdf del mapa
     judicial utilizando el paquete tabulizer de y posteriormente se
     integra la información de los circuitos con la de la DIVIPOLA. Este
-    proceso implica usar algoritmos de reconocimientos de caracteres,
+    proceso implica usar algoritmos de similitud de caracteres,
     expresiones regulares y tratamiento manual para corregir algunas
-    inconsistencias resultantes con los algoritmos:
+    inconsistencias resultantes al aplicar los algoritmos:
 
 -   Al mapa judiicial colombiano se le corrigen los nombres de los
     municipios, se le agrega los códigos de la división política
